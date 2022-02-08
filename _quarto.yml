@@ -1,0 +1,341 @@
+project:
+  type: website
+  output-dir: _site
+  resources: 
+    - "/docs/download/_download.json"
+
+website:
+  title: "Quarto"
+  image: "quarto.png"
+  favicon: "favicon.png"
+  google-analytics: "G-FV9Z7SDZ0M"
+  open-graph: true
+  twitter-card: true
+  site-url: https://quarto.org
+  repo-url: https://github.com/quarto-dev/quarto-web
+  repo-actions: [edit, issue]
+  page-navigation: true
+  search:
+    algolia:
+      index-name: prod_QUARTO
+      application-id: RHB655RP2G
+      search-only-api-key: 184556c7b323fe51ecefb18d9c172e3c
+      analytics-events: true
+      show-logo: true
+  page-footer: 
+    left: |
+      Proudly supported by
+      [![](https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg){width=65px}](https://www.rstudio.com)
+    center: 
+      - text: "About"
+        href: about.qmd
+      - text: "License"
+        href: license.qmd
+      - text: "Trademark"
+        href: trademark.qmd
+    right:
+      - icon: twitter
+        href: https://twitter.com/quarto_dev
+      - icon: github
+        href: https://github.com/quarto-dev/quarto-cli
+  navbar:
+    background: light
+    logo: quarto.png
+    title: false
+    collapse-below: lg
+    left:
+      - text: "Overview"
+        href: index.qmd
+      - text: "Get Started"
+        href: docs/getting-started/index.qmd
+      - text: "Guide"
+        href: docs/guide/index.qmd
+      - text: "Reference"
+        href: docs/reference/index.qmd
+      - href: docs/gallery/index.qmd
+    right:
+      - icon: twitter
+        href: https://twitter.com/quarto_dev
+      - icon: github
+        href: https://github.com/quarto-dev/quarto-cli
+
+  sidebar:
+    - id: get-started
+      title: "Get Started"
+      style: "floating"
+      collapse-level: 2
+      align: left
+      contents:
+        - text: "Overview"
+          href: docs/getting-started/index.qmd
+        - docs/getting-started/running-code.qmd
+        - docs/getting-started/installation.qmd
+        
+    - id: guide
+      collapse-level: 1
+      contents:
+        - text: "User Guide"
+          href: docs/guide/index.qmd
+        - section: "Authoring"
+          contents:
+            - docs/authoring/markdown-basics.qmd
+            - docs/authoring/footnotes-and-citations.qmd
+            - docs/authoring/figure-layout.qmd
+            - docs/authoring/cross-references.qmd
+            - docs/authoring/callouts.qmd
+            - docs/authoring/article-layout.qmd
+        - section: "Computations"
+          contents:
+            - docs/computations/running-code.qmd
+            - docs/computations/execution-options.qmd
+            - docs/computations/parameters.qmd
+        - section: "Formats"
+          contents:
+            - section: "HTML"
+              contents:
+                - docs/output-formats/html-basics.qmd
+                - docs/output-formats/html-code.qmd
+                - docs/output-formats/html-themes.qmd
+                - docs/output-formats/html-publishing.qmd
+            - section: "PDF"
+              contents:
+                - docs/output-formats/pdf-basics.qmd
+                - docs/output-formats/pdf-engine.qmd
+            - section: "MS Word"
+              contents:
+                - docs/output-formats/ms-word.qmd
+                - docs/output-formats/ms-word-templates.qmd
+            - section: "Presentations"
+              contents:
+                - text: "Overview"
+                  href: docs/presentations/index.qmd
+                - section: docs/presentations/revealjs/index.qmd
+                  contents:
+                    - text: "Reveal Basics"
+                      href: docs/presentations/revealjs/index.qmd
+                    - docs/presentations/revealjs/presenting.qmd
+                    - docs/presentations/revealjs/advanced.qmd
+                    - docs/presentations/revealjs/themes.qmd
+                - docs/presentations/powerpoint.qmd
+                - docs/presentations/beamer.qmd
+            - section: "Markdown"
+              contents:
+                - docs/output-formats/gfm.qmd
+                - docs/output-formats/hugo.qmd
+            - docs/output-formats/all-formats.qmd
+        - section: "Tools"
+          contents:
+            - docs/tools/jupyter-lab.qmd
+            - docs/tools/rstudio.qmd
+            - docs/tools/vscode.qmd
+            - docs/tools/text-editors.qmd
+            - section: "Visual Editor"
+              contents:
+                - text: Editor Basics
+                  href: docs/visual-editor/index.qmd 
+                - docs/visual-editor/technical.qmd
+                - docs/visual-editor/content.qmd
+                - docs/visual-editor/options.qmd
+                - docs/visual-editor/markdown.qmd
+        - section: "Interactivity"
+          contents:
+            - text: "Overview"
+              href: docs/interactive/index.qmd
+            - section: docs/interactive/ojs/index.qmd
+              contents:
+                - text: "Introduction"
+                  href: docs/interactive/ojs/index.qmd
+                - docs/interactive/ojs/libraries.qmd
+                - docs/interactive/ojs/data-sources.qmd
+                - docs/interactive/ojs/ojs-cells.qmd
+                - docs/interactive/ojs/shiny.qmd
+                - docs/interactive/ojs/code-reuse.qmd
+                - section: "Examples"
+                  contents:
+                    - docs/interactive/ojs/examples/penguins.qmd
+                    - docs/interactive/ojs/examples/sunburst.qmd
+                    - docs/interactive/ojs/examples/arquero.qmd
+                    - docs/interactive/ojs/examples/population.qmd
+                    - docs/interactive/ojs/examples/noaa-co2.qmd
+                    - docs/interactive/ojs/examples/github.qmd
+                    - docs/interactive/ojs/examples/layout.qmd
+                    - section: "Shiny"
+                      contents:
+                        - text: "K-Means"
+                          href: https://jjallaire.shinyapps.io/kmeans-shiny-ojs/
+                        - text: "Binning"
+                          href: https://jjallaire.shinyapps.io/binning-shiny-ojs/
+                        - text: "Data Binding"
+                          href: https://jjallaire.shinyapps.io/data-shiny-ojs/
+                        - text: "Covid Map"
+                          href: https://jjallaire.shinyapps.io/covid19-bicartogram/
+            - section: docs/interactive/shiny/index.qmd
+              contents:
+                - text: "Introduction"
+                  href: docs/interactive/shiny/index.qmd
+                - docs/interactive/shiny/running.qmd
+                - docs/interactive/shiny/execution.qmd
+                - docs/interactive/shiny/resources.qmd
+                - section: "Examples"
+                  contents:
+                    - text: "Old Faithful"
+                      href: https://jjallaire.shinyapps.io/shiny-old-faithful/
+                    - text: "K-Means"
+                      href: https://jjallaire.shinyapps.io/shiny-k-means/
+                    - text: "Diamonds"
+                      href: https://jjallaire.shinyapps.io/shiny-diamonds/
+            - section: "Widgets"
+              contents:
+                - docs/interactive/widgets/jupyter.qmd
+                - docs/interactive/widgets/htmlwidgets.qmd
+            - docs/interactive/layout.qmd
+        - section: "Projects"
+          contents:
+            - section: "Using Projects"
+              href: docs/projects/quarto-projects.qmd
+              contents:
+                - docs/projects/quarto-projects.qmd
+                - docs/projects/code-execution.qmd
+                - docs/projects/virtual-environments.qmd
+            - section: "Websites"
+              href: docs/websites/website-basics.qmd
+              contents:
+                - docs/websites/website-basics.qmd
+                - docs/websites/website-navigation.qmd
+                - docs/websites/website-search.qmd
+                - docs/websites/website-tools.qmd
+                - docs/websites/publishing-websites.qmd
+            - section: "Books"
+              href: docs/books/book-basics.qmd
+              contents:
+                - docs/books/book-basics.qmd
+                - docs/books/book-structure.qmd
+                - docs/books/book-crossrefs.qmd
+                - docs/books/book-output.qmd    
+        - section: "Advanced"
+          contents:
+            - docs/output-formats/page-layout.qmd
+            - docs/authoring/shortcodes-and-filters.qmd
+            - docs/authoring/language.qmd
+
+    - id: reference
+      title: "Reference"
+      contents:
+       - text: "Reference"
+         href: docs/reference/index.qmd
+       - section: "Formats"
+         contents:
+           - text: "HTML"
+             href: docs/reference/formats/html.qmd
+           - text: "PDF"
+             href: docs/reference/formats/pdf.qmd
+           - text: "MS Word"
+             href: docs/reference/formats/docx.qmd
+           - text: "OpenOffice"
+             href: docs/reference/formats/odt.qmd
+           - text: "ePub"
+             href: docs/reference/formats/epub.qmd
+           - section: "Presentations"
+             contents:
+               - text: "Revealjs"
+                 href: docs/reference/formats/presentations/revealjs.qmd
+               - text: "PowerPoint"
+                 href: docs/reference/formats/presentations/pptx.qmd
+               - text: "Beamer"
+                 href: docs/reference/formats/presentations/beamer.qmd  
+           - section: "Markdown"
+             contents:
+               - text: "GitHub"
+                 href: docs/reference/formats/markdown/gfm.qmd
+               - text: "CommonMark"
+                 href: docs/reference/formats/markdown/commonmark.qmd
+               - text: "Hugo"
+                 href: docs/reference/formats/markdown/hugo.qmd
+               - text: "Markua"
+                 href: docs/reference/formats/markdown/markua.qmd
+           - section: "Wikis"
+             contents:
+               - text: "MediaWiki"
+                 href: docs/reference/formats/wiki/mediawiki.qmd
+               - text: "DokuWiki"
+                 href: docs/reference/formats/wiki/dokuwiki.qmd
+               - text: "ZimWiki"
+                 href: docs/reference/formats/wiki/zimwiki.qmd
+               - text: "Jira Wiki"
+                 href: docs/reference/formats/wiki/jira.qmd
+           - section: "More Formats"
+             contents:
+               - text: "JATS"
+                 href: docs/reference/formats/jats.qmd
+               - text: "Jupyter"
+                 href: docs/reference/formats/ipynb.qmd
+               - text: "ConTeXt"
+                 href: docs/reference/formats/context.qmd 
+               - text: "RTF"
+                 href: docs/reference/formats/rtf.qmd
+               - text: "reST"
+                 href: docs/reference/formats/rst.qmd
+               - text: "AsciiDoc"
+                 href: docs/reference/formats/asciidoc.qmd  
+               - text: "Org-Mode"
+                 href: docs/reference/formats/org.qmd 
+               - text: "Muse"
+                 href: docs/reference/formats/muse.qmd 
+               - text: "GNU TexInfo"
+                 href: docs/reference/formats/texinfo.qmd
+               - text: "Groff Man Page"
+                 href: docs/reference/formats/man.qmd
+               - text: "Groff Manuscript"
+                 href: docs/reference/formats/ms.qmd
+               - text: "Haddock markup"
+                 href: docs/reference/formats/haddock.qmd
+               - text: "OPML"
+                 href: docs/reference/formats/opml.qmd
+               - text: "Textile"
+                 href: docs/reference/formats/textile.qmd  
+               - text: "DocBook"
+                 href: docs/reference/formats/docbook.qmd
+               - text: "InDesign"
+                 href: docs/reference/formats/icml.qmd
+               - text: "TEI Simple"
+                 href: docs/reference/formats/tei.qmd
+               - text: "FictionBook"
+                 href: docs/reference/formats/fb2.qmd
+       - section: "Code Cells"
+         contents:
+            - text: "Jupyter"
+              href: docs/reference/cells/cells-jupyter.qmd
+            - text: "Knitr"
+              href: docs/reference/cells/cells-knitr.qmd
+            - text: "Observable"
+              href: docs/reference/cells/cells-ojs.qmd
+       - section: "Projects"
+         contents:
+           - text: "Options"
+             href: docs/reference/projects/options.qmd
+           - text: "Websites"
+             href: docs/reference/projects/websites.qmd
+           - text: "Books"
+             href: docs/reference/projects/books.qmd
+                 
+            
+bibliography: references.bib
+
+format:
+  html:
+    toc: true
+    theme: 
+      light: [cosmo, theme.scss]
+    code-copy: true
+    code-overflow: wrap
+    css: styles.css
+    include-after-body: js.html
+   
+filters:
+  - filters/include-files.lua
+  - quarto
+  
+editor: visual
+
+
+
